@@ -1,0 +1,11 @@
+D:\Programing\c#\JapanesePractice\JapanesePractice\bin\Debug\JapanesePractice.exe.config
+D:\Programing\c#\JapanesePractice\JapanesePractice\bin\Debug\JapanesePractice.exe
+D:\Programing\c#\JapanesePractice\JapanesePractice\bin\Debug\JapanesePractice.pdb
+D:\Programing\c#\JapanesePractice\JapanesePractice\obj\Debug\JapanesePractice.csproj.AssemblyReference.cache
+D:\Programing\c#\JapanesePractice\JapanesePractice\obj\Debug\JapanesePractice.Properties.Resources.resources
+D:\Programing\c#\JapanesePractice\JapanesePractice\obj\Debug\JapanesePractice.csproj.GenerateResource.cache
+D:\Programing\c#\JapanesePractice\JapanesePractice\obj\Debug\JapanesePractice.csproj.CoreCompileInputs.cache
+D:\Programing\c#\JapanesePractice\JapanesePractice\obj\Debug\JapanesePractice.exe
+D:\Programing\c#\JapanesePractice\JapanesePractice\obj\Debug\JapanesePractice.pdb
+D:\Programing\c#\JapanesePractice\JapanesePractice\obj\Debug\JapanesePractice.Graph.resources
+D:\Programing\c#\JapanesePractice\JapanesePractice\obj\Debug\JapanesePractice.Main.resources
