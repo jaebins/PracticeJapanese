@@ -13,11 +13,6 @@ namespace JapanesePractice
 {
     public partial class Main : Form
     {
-        Random ran = new Random();
-
-        const int answelCount = 3;
-        string savePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/PracticeJap";
-
         string hiragana = "あかさたなはまやらわがざだばぱ" +
             "いきしちにひみりゐぎじぢびぴ" +
             "うくすつぬふむゆるぐずづぶぷ" +
@@ -30,7 +25,6 @@ namespace JapanesePractice
             "e ke se te ne he me re we ge ze de be pe " +
             "o ko so to no ho mo yo ro wo go zo do bo po " +
             "v n";
-
         string gatakana = "アカサタナイキシチニウクスツヌエケセテネオコソトノ" +
             "ヴンハマヤラヒミリフムユルヘメレホモヨロ" +
             "ワガザダバパヰギジヂビピグズヅブプヱゲゼデベペヲゴゾドボポ";
@@ -38,6 +32,12 @@ namespace JapanesePractice
             "ha ma ya ra hi mi ri fu mu yu ru he me re ho mo yo ro " +
             "wa ga za da ba pa wi gi ji dji bi pi gu zu dzu bu pu " +
             "we ge ze de be pe wo go zo do bo po";
+
+        Random ran = new Random();
+
+        const int answelCount = 3;
+        string savePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "/PracticeJap";
+        int fileCount = 0;
 
         List<char> cutJap = new List<char>();
         string[] cutJap_en;
@@ -162,17 +162,32 @@ namespace JapanesePractice
             ofd.Filter = "그림 파일 (*.jpg, *.gif, *.bmp, *.png) | *.jpg; *.gif; *.bmp; *.png;";
             if(ofd.ShowDialog() == DialogResult.OK)
             {
+                this.BackgroundImage = null;
+
                 string tarPath = ofd.FileName;
                 DirectoryInfo di = new DirectoryInfo(savePath);
                 if (!di.Exists)
                 {
                     di.Create();
+                    DirectoryInfo di2 = new DirectoryInfo(savePath + "/usingImg");
+                    di2.Create();
                 }
 
-                File.Copy(tarPath, savePath + "/target.png", true);
                 Size size = new Size(this.Width, this.Height);
-                Bitmap image = new Bitmap(new Bitmap(savePath + "/target.png"), size);
-                this.BackgroundImage = image;
+                File.Copy(tarPath, savePath + "/target.png", true);
+                Bitmap img;
+                if (File.Exists(savePath + "/usingImg/target.png"))
+                {
+                    File.Copy(savePath + "/target.png", savePath + "/usingImg/"+ "target" + fileCount + ".png", true);
+                    img = new Bitmap(new Bitmap(savePath + "/usingImg/" + "target" + fileCount + ".png"), size);
+                }
+                else
+                {
+                    File.Copy(savePath + "/target.png", savePath + "/usingImg/target.png", true);
+                    img = new Bitmap(new Bitmap(savePath + "/usingImg/target.png"), size);
+                }
+                this.BackgroundImage = img;
+                fileCount++;
             }
         }
 
@@ -206,11 +221,20 @@ namespace JapanesePractice
             selButs[1] = select2_but;
             selButs[2] = select3_but;
 
-            DirectoryInfo di = new DirectoryInfo(savePath);
-            if (di.Exists)
+            if(File.Exists(savePath + "/usingImg/target.png"))
+            {
+                string[] fi = Directory.GetFiles(savePath + "/usingImg");
+                for(int i = 0; i < fi.Length; i++)
+                {
+                    File.Delete(fi[i]);
+                }
+            }
+
+            if (File.Exists(savePath + "/target.png"))
             {
                 Size size = new Size(this.Width, this.Height);
-                Bitmap image = new Bitmap(new Bitmap(savePath + "/target.png"), size);
+                File.Copy(savePath + "/target.png", savePath + "/usingImg/target.png", true);
+                Bitmap image = new Bitmap(new Bitmap(savePath + "/usingImg/target.png"), size);
                 this.BackgroundImage = image;
             }
         }
