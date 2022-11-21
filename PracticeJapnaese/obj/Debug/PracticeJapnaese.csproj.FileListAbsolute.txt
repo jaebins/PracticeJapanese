@@ -1,0 +1,11 @@
+D:\Jaebin\Programing\c#\PracticeJapnaese\PracticeJapnaese\obj\Debug\PracticeJapnaese.csproj.AssemblyReference.cache
+D:\Jaebin\Programing\c#\PracticeJapnaese\PracticeJapnaese\obj\Debug\PracticeJapnaese.csproj.SuggestedBindingRedirects.cache
+D:\Jaebin\Programing\c#\PracticeJapnaese\PracticeJapnaese\obj\Debug\PracticeJapnaese.Properties.Resources.resources
+D:\Jaebin\Programing\c#\PracticeJapnaese\PracticeJapnaese\obj\Debug\PracticeJapnaese.csproj.GenerateResource.cache
+D:\Jaebin\Programing\c#\PracticeJapnaese\PracticeJapnaese\obj\Debug\PracticeJapnaese.csproj.CoreCompileInputs.cache
+D:\Jaebin\Programing\c#\PracticeJapnaese\PracticeJapnaese\bin\Debug\PracticeJapnaese.exe.config
+D:\Jaebin\Programing\c#\PracticeJapnaese\PracticeJapnaese\bin\Debug\PracticeJapnaese.exe
+D:\Jaebin\Programing\c#\PracticeJapnaese\PracticeJapnaese\bin\Debug\PracticeJapnaese.pdb
+D:\Jaebin\Programing\c#\PracticeJapnaese\PracticeJapnaese\obj\Debug\PracticeJapnaese.exe
+D:\Jaebin\Programing\c#\PracticeJapnaese\PracticeJapnaese\obj\Debug\PracticeJapnaese.pdb
+D:\Jaebin\Programing\c#\PracticeJapnaese\PracticeJapnaese\obj\Debug\JapanesePractice.Main.resources
